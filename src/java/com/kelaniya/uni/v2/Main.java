@@ -1,7 +1,11 @@
 package com.kelaniya.uni.v2;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
         //Make sure to validate arguments before using
         if (args.length==0){
@@ -17,5 +21,11 @@ public class Main {
             return;
         }
         System.out.println(args[0]);
+
+        try {
+            Files.readAllLines(Paths.get("D:\\Dinu\\LEVEL 2\\SEM 1\\SENG 21222 - Software Construction\\Calculator\\numbers.txt~e0b470947ae7844d253813755abcff04449578ff"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
