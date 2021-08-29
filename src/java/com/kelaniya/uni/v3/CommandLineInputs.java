@@ -1,0 +1,28 @@
+package com.kelaniya.uni.v3;
+
+public class CommandLineInputs {
+
+    private String[] args;
+
+    public CommandLineInputs(String[] argument){
+        this.args=argument;
+    }
+
+    public String getOperator(){
+        //Make sure to validate arguments before using
+        if (args.length == 0) {
+            System.out.println("Please provide an argument before hand");
+            return " ";
+        }
+
+        //Second validation
+        String operator = args[0];
+
+
+        if (!(operator.equals("add")) || (operator.equals("sub")) || (operator.equals("mul")) || (operator.equals("div"))) {
+            System.out.println("Please enter add/su/mul/div");
+            return " ";
+        }
+        return operator;
+    }
+}
