@@ -7,20 +7,16 @@ public class OperationFactory {
 
         switch(operator){
             case "add":
-
                 operation= new AddOperation();
                 break;
             case "sub":
                 operation=new SubOperation();
-
                 break;
             case "mul":
                 operation=new MulOperation();
-
                 break;
             case "div":
                 operation=new DivOperation();
-
                 break;
         }
         return operation;

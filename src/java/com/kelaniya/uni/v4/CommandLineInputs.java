@@ -19,8 +19,8 @@ public class CommandLineInputs {
         String operator = args[0];
 
 
-        if (!(operator.equals("add")) || (operator.equals("sub")) || (operator.equals("mul")) || (operator.equals("div"))) {
-            System.out.println("Please enter add/su/mul/div");
+        if (!((operator.equals("add")) || (operator.equals("sub")) || (operator.equals("mul")) || (operator.equals("div")))) {
+            System.out.println("Please enter add/sub/mul/div");
             return " ";
         }
         return operator;
