@@ -1,9 +1,6 @@
 package com.kelaniya.uni.v3;
 
-import com.kelaniya.uni.v3.operation.AddOperation;
-import com.kelaniya.uni.v3.operation.DivOperation;
-import com.kelaniya.uni.v3.operation.MulOperation;
-import com.kelaniya.uni.v3.operation.SubOperation;
+import com.kelaniya.uni.v3.operation.*;
 
 import java.io.IOException;
 
