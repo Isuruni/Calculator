@@ -4,11 +4,12 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThrows;
 
 public class DivOperationTest {
 
     @Test
-    public void should_divide_positive_values() throws InvalidDOperationException {
+    public void should_divide_positive_values() throws InvalidCalOperationException {
         DivOperation divOperation= new DivOperation();
 
         Double result = divOperation.execute(new Double[]{6.0,3.0});
@@ -17,11 +18,10 @@ public class DivOperationTest {
     }
 
     @Test
-    public void should_not_divide_by_zero() throws InvalidDOperationException {
+    public void should_not_divide_by_zero() throws InvalidCalOperationException {
         DivOperation divOperation= new DivOperation();
 
-        Double result = divOperation.execute(new Double[]{6.0,3.0});
-        assertThat(result, is(2.0));
+        assertThrows(InvalidCalOperationException.class,() ->{divOperation.execute(new Double[] {6.0,0.0});});
     }
 
 }

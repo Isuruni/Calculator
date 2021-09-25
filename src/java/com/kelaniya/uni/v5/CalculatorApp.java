@@ -1,13 +1,10 @@
 package com.kelaniya.uni.v5;
 
-import com.kelaniya.uni.v5.input.CommandLineInputs;
 import com.kelaniya.uni.v5.input.Inputs;
-import com.kelaniya.uni.v5.operation.InvalidDOperationException;
+import com.kelaniya.uni.v5.operation.InvalidCalOperationException;
 import com.kelaniya.uni.v5.operation.Operation;
 import com.kelaniya.uni.v5.operation.OperationFactory;
-import com.kelaniya.uni.v5.repository.FileNumberRepository;
 import com.kelaniya.uni.v5.repository.NumberRepository;
-import com.kelaniya.uni.v5.ui.CmdLineUI;
 import com.kelaniya.uni.v5.ui.UI;
 
 import java.io.IOException;
@@ -35,7 +32,7 @@ public class CalculatorApp {
         Double result= null;
         try {
             result = operation.execute(numbers);
-        } catch (InvalidDOperationException e) {
+        } catch (InvalidCalOperationException e) {
             ui.showMessage("Error Occurred!" + e.getMessage());
         }
         ui.showMessage("The result: "+ result);
