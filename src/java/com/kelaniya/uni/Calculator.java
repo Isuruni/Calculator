@@ -4,6 +4,7 @@ import java.io.File; //To read from file
 import java.io.FileNotFoundException;//For exception handling in reading from text file
 import java.util.Scanner;//To obtain user input and to read from file
 
+
 public class Calculator {
     String method;//For calculation method
     int i,result;

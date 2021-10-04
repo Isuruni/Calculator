@@ -8,15 +8,18 @@ import java.util.List;
 public class FileNumberRepository implements NumberRepository{
 
 
-    public Double[] getNumbers() throws NumberRepositoryException {
-//read from numbers.txt file
+    public Double[] getNumbers(String path) throws NumberRepositoryException {
+
+
+        //read from numbers.txt file and return them in a Double array
+
         List<String> numberString= null;
         try {
             numberString = Files.readAllLines(
-                    Paths.get("D:\\Dinu\\LEVEL 2\\SEM 1\\SENG 21222 - Software Construction\\Calculator\\numbers.txt~e0b470947ae7844d253813755abcff04449578ff")
+                    Paths.get(path)
             );
         } catch (IOException e) {
-            e.printStackTrace();
+
             throw new NumberRepositoryException(e,"Couldn't read the text file");
         }
 

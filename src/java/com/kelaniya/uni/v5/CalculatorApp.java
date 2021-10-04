@@ -9,7 +9,7 @@ import com.kelaniya.uni.v5.repository.NumberRepository;
 import com.kelaniya.uni.v5.repository.NumberRepositoryException;
 import com.kelaniya.uni.v5.ui.UI;
 
-import java.io.IOException;
+//Coordinator class
 
 public class CalculatorApp {
 
@@ -31,7 +31,7 @@ public class CalculatorApp {
         String operator= null;
         try {
             operator = inputs.getOperator();
-            Double[] numbers= numberRepository.getNumbers();
+            Double[] numbers= numberRepository.getNumbers("D:\\Dinu\\LEVEL 2\\SEM 1\\SENG 21222 - Software Construction\\Calculator\\numbers.txt~e0b470947ae7844d253813755abcff04449578ff");
             Operation operation = operation_factory.getInstance(operator);
             Double result = operation.execute(numbers);
             ui.showMessage("The result: "+ result);
@@ -39,7 +39,6 @@ public class CalculatorApp {
         } catch (InvalidCalOperationException | InvalidInputException |NumberRepositoryException e ) {
             ui.showMessage("Error Occurred!" + e.getMessage());
         }
-
 
     }
 }
